@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I.E. Tape &amp; Painting | Pintura y drywall en Dallas, TX</title>
+<meta name="description" content="I.E. Tape & Painting. Pintura interior y exterior, y drywall con tape y acabado en Dallas, Texas. Roger A. Castro, 214-881-8706.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Figtree:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --paper: #FFFFFF;
+    --ink: #16213A;
+    --muted: #54607A;
+    --line: rgba(22, 33, 58, 0.14);
+    --tape: #2A66D9;
+    --on-tape: #FFFFFF;
+    --band: #16213A;
+    --on-band: #F5F6F8;
+    --sun: #F5B921;
+    --brick: #D8412F;
+    --leaf: #2E9E5B;
+    --rose: #E8709A;
+    --violet: #7B5CC4;
+    --shadow: 0 18px 40px -22px rgba(22, 33, 58, 0.35);
+
+    --font-display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-script: "Caveat", "Segoe Script", "Bradley Hand", cursive;
+
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E1424;
+      --surface: #161E33;
+      --paper: #1A2340;
+      --ink: #EAEFF9;
+      --muted: #9AA6C0;
+      --line: rgba(234, 239, 249, 0.16);
+      --tape: #6E9BFF;
+      --on-tape: #0E1424;
+      --band: #1B2542;
+      --on-band: #EAEFF9;
+      --shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.7);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E1424;
+    --surface: #161E33;
+    --paper: #1A2340;
+    --ink: #EAEFF9;
+    --muted: #9AA6C0;
+    --line: rgba(234, 239, 249, 0.16);
+    --tape: #6E9BFF;
+    --on-tape: #0E1424;
+    --band: #1B2542;
+    --on-band: #EAEFF9;
+    --shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.7);
+  }
+
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 80px); scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, video { max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--tape); outline-offset: 3px; border-radius: 4px; }
+
+  .wrap { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 40px); }
+
+  h1, h2, h3 { font-family: var(--font-display); margin: 0; }
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 4.9rem);
+    font-weight: 800;
+    font-stretch: 118%;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  h2 {
+    font-size: clamp(1.8rem, 4.2vw, 2.9rem);
+    font-weight: 800;
+    font-stretch: 112%;
+    line-height: 1.08;
+    letter-spacing: -0.005em;
+  }
+  h3 { font-size: 1.2rem; font-weight: 700; font-stretch: 105%; line-height: 1.25; }
+  p { margin: 0; }
+
+  /* Six-colour strip taken from the business card's paint cans */
+  .strip {
+    height: 8px;
+    background: linear-gradient(90deg,
+      var(--sun) 0 16.66%, var(--brick) 16.66% 33.33%, var(--tape) 33.33% 50%,
+      var(--leaf) 50% 66.66%, var(--rose) 66.66% 83.33%, var(--violet) 83.33% 100%);
+  }
+
+  /* ---------- Header ---------- */
+  .top {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 20;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-family: var(--font-display); font-weight: 800; font-stretch: 112%; font-size: 1.05rem; line-height: 1.1; }
+  .mark { display: grid; grid-template-columns: repeat(2, 12px); gap: 3px; flex: none; }
+  .mark i { width: 12px; height: 12px; border-radius: 3px; display: block; }
+  .mark i:nth-child(1) { background: var(--sun); }
+  .mark i:nth-child(2) { background: var(--brick); }
+  .mark i:nth-child(3) { background: var(--tape); }
+  .mark i:nth-child(4) { background: var(--leaf); }
+  .nav { display: flex; align-items: center; gap: 22px; }
+  .nav a.link { text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--muted); }
+  .nav a.link:hover { color: var(--ink); }
+  .nav .actions { display: flex; align-items: center; gap: 10px; }
+  @media (max-width: 800px) { .nav a.link { display: none; } }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 22px; border-radius: 10px;
+    font-family: var(--font-body); font-weight: 700; font-size: 1rem; line-height: 1;
+    text-decoration: none; border: 2px solid transparent; cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-primary { background: var(--tape); color: var(--on-tape); }
+  .btn-primary:hover { filter: brightness(1.08); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--ink); }
+  .btn-sm { padding: 10px 16px; font-size: 0.95rem; }
+  .lang { background: transparent; color: var(--ink); border: 2px solid var(--line); border-radius: 10px; padding: 8px 12px; font: 700 0.85rem var(--font-body); cursor: pointer; }
+  .lang:hover { border-color: var(--ink); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-block: clamp(40px, 7vw, 96px); overflow-x: clip; }
+  .hero .wrap { display: grid; gap: 48px; align-items: center; }
+  @media (min-width: 900px) { .hero .wrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); } }
+  .hero-copy { display: grid; gap: 24px; justify-items: start; }
+  .hero-copy .sub { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--muted); max-width: 34em; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-note { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--muted); }
+  .hero-note svg { width: 20px; height: 20px; color: var(--leaf); flex: none; }
+
+  /* Paint-chip fan: the one animated moment on the page */
+  .fan { --h: clamp(190px, 52vw, 320px); position: relative; height: calc(var(--h) + 24px); width: 100%; }
+  .chip {
+    position: absolute; bottom: 0; left: 50%;
+    width: calc(var(--h) * 0.38); height: var(--h); margin-left: calc(var(--h) * -0.19);
+    transform-origin: 50% 92%;
+    transform: rotate(var(--a));
+    background: var(--surface);
+    border-radius: 8px 8px 5px 5px;
+    box-shadow: 0 10px 26px -12px rgba(22, 33, 58, 0.5);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    animation: deal 0.95s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: calc(var(--i) * 90ms + 250ms);
+  }
+  .chip b { display: block; flex: 1 1 72%; background: var(--c); }
+  .chip span {
+    flex: 0 0 28%; display: flex; align-items: flex-start; justify-content: center;
+    padding-top: 8px; color: var(--ink);
+    font-family: var(--font-display); font-weight: 700; font-stretch: 105%;
+    font-size: clamp(0.62rem, 1.7vw, 0.8rem);
+  }
+  .fan .pin {
+    position: absolute; left: 50%; bottom: calc(var(--h) * 0.08 - 8px);
+    width: 16px; height: 16px; margin-left: -8px; border-radius: 50%;
+    background: var(--ink); border: 3px solid var(--bg); z-index: 5;
+  }
+  @keyframes deal { from { transform: rotate(0deg); } to { transform: rotate(var(--a)); } }
+  @media (prefers-reduced-motion: reduce) {
+    .chip { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ---------- Sections ---------- */
+  .section { padding-block: clamp(56px, 9vw, 112px); }
+  .section-head { display: grid; gap: 12px; margin-bottom: clamp(28px, 5vw, 52px); max-width: 40em; }
+  .section-head p { color: var(--muted); font-size: 1.1rem; }
+
+  /* Letter */
+  .letter-wrap { display: grid; gap: clamp(36px, 6vw, 72px); align-items: start; }
+  @media (min-width: 900px) { .letter-wrap { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); } }
+  .letter {
+    position: relative;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: clamp(28px, 5vw, 56px);
+  }
+  .letter::before, .letter::after {
+    content: ""; position: absolute; top: -13px; width: 96px; height: 28px;
+    background: color-mix(in srgb, var(--tape) 38%, transparent);
+    border-left: 2px dotted color-mix(in srgb, var(--tape) 55%, transparent);
+    border-right: 2px dotted color-mix(in srgb, var(--tape) 55%, transparent);
+  }
+  .letter::before { left: -18px; transform: rotate(-38deg); }
+  .letter::after { right: -18px; transform: rotate(38deg); }
+  .letter .place { color: var(--muted); font-size: 0.95rem; margin-bottom: 28px; }
+  .letter p + p { margin-top: 1.1em; }
+  .letter .hi { font-weight: 700; margin-bottom: 1.1em; }
+  .letter { line-height: 1.75; }
+  .letter .body { max-width: 62ch; }
+  .sign { margin-top: 32px; }
+  .sign .script { font-family: var(--font-script); font-size: 2.6rem; line-height: 1; color: var(--tape); margin: 10px 0 6px; }
+  .sign .role { color: var(--muted); font-size: 0.95rem; }
+
+  .facts h3 { margin-bottom: 8px; font-size: 1.35rem; }
+  .facts dl { margin: 0; }
+  .facts .row { padding: 16px 0; border-top: 1px solid var(--line); display: grid; gap: 2px; }
+  .facts .row:last-child { border-bottom: 1px solid var(--line); }
+  .facts dt { font-size: 0.875rem; color: var(--muted); font-weight: 600; }
+  .facts dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+  .facts dd a { text-decoration-thickness: 2px; text-underline-offset: 3px; }
+
+  /* Services */
+  .services { list-style: none; margin: 0; padding: 0; display: grid; gap: 0 clamp(28px, 6vw, 72px); }
+  @media (min-width: 800px) { .services { grid-template-columns: 1fr 1fr; } }
+  .services li {
+    display: grid; grid-template-columns: 10px 1fr; gap: 18px;
+    padding: 24px 0; border-top: 1px solid var(--line);
+  }
+  .services .sw { background: var(--c); border-radius: 3px; }
+  .services p { color: var(--muted); margin-top: 6px; }
+
+  /* Process */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 36px 28px; counter-reset: step; }
+  @media (min-width: 700px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+  .steps li { border-top: 6px solid var(--tape); padding-top: 18px; counter-increment: step; }
+  .steps li::before {
+    content: counter(step); display: block; margin-bottom: 8px;
+    font-family: var(--font-display); font-weight: 800; font-stretch: 118%; font-size: 2.4rem; line-height: 1; color: var(--tape);
+  }
+  .steps p { color: var(--muted); margin-top: 8px; }
+
+  /* Album CTA */
+  .album-card {
+    display: grid; gap: 28px; align-items: center;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+    padding: clamp(28px, 5vw, 48px); box-shadow: var(--shadow);
+  }
+  @media (min-width: 800px) { .album-card { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr); } }
+  .album-copy p { color: var(--muted); font-size: 1.1rem; margin: 14px 0 24px; max-width: 38em; }
+  .album-swatch { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .album-swatch span { display: block; aspect-ratio: 1; border-radius: 10px; background: var(--c); }
+
+  dialog.lightbox { border: 0; padding: 0; background: transparent; max-width: 94vw; max-height: 92vh; }
+  dialog.lightbox::backdrop { background: rgba(8, 12, 24, 0.86); }
+  dialog.lightbox img { display: block; max-width: 94vw; max-height: 88vh; border-radius: 10px; }
+  dialog.lightbox button { position: absolute; top: 8px; right: 8px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: #fff; color: #16213A; font-size: 1.4rem; line-height: 1; cursor: pointer; }
+
+  /* Contact */
+  .contact { background: var(--band); color: var(--on-band); }
+  .contact .wrap { display: grid; gap: 40px; }
+  @media (min-width: 900px) { .contact .wrap { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: center; } }
+  .contact h2 { margin-bottom: 16px; }
+  .contact .lead { opacity: 0.85; font-size: 1.15rem; max-width: 30em; }
+  .contact .cta-row { margin-top: 28px; }
+  .contact .btn-sun { background: var(--sun); color: #16213A; }
+  .contact .btn-sun:hover { filter: brightness(1.06); }
+  .contact .btn-line { color: var(--on-band); border-color: rgba(245, 246, 248, 0.35); background: transparent; }
+  .contact .btn-line:hover { border-color: var(--on-band); }
+  .phone-big {
+    display: inline-block; font-family: var(--font-display); font-weight: 800; font-stretch: 118%;
+    font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.05; text-decoration: none; color: var(--on-band);
+    margin-bottom: 8px;
+  }
+  .contact address { font-style: normal; display: grid; gap: 4px; opacity: 0.9; }
+  .contact .list { display: grid; gap: 18px; }
+  .contact .list .item { display: grid; gap: 2px; }
+  .contact .list small { font-size: 0.85rem; opacity: 0.7; font-weight: 600; }
+  .contact .list a { text-underline-offset: 3px; overflow-wrap: anywhere; }
+
+
+  .btn .num { font-weight: 600; opacity: 0.95; }
+  @media (max-width: 560px) { .btn .num { display: none; } }
+  .num-row, .mail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+  .contact .list .phone-big { margin-bottom: 0; }
+  .contact .list .mail-row a { font-size: 1.1rem; font-weight: 600; }
+  .contact .hint { font-size: 0.9rem; opacity: 0.75; margin-top: 6px; }
+  .copy {
+    background: transparent; color: var(--on-band); cursor: pointer;
+    border: 2px solid rgba(245, 246, 248, 0.35); border-radius: 10px;
+    padding: 8px 14px; font: 700 0.9rem var(--font-body);
+  }
+  .copy:hover { border-color: var(--on-band); }
+
+  footer { padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); color: var(--muted); font-size: 0.9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="strip" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="I.E. Tape &amp; Painting">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>I.E. Tape &amp; Painting</span>
+    </a>
+    <nav class="nav" data-i18n-aria="nav_label" aria-label="Principal">
+      <a class="link" href="#sobre-mi" data-i18n="nav_about">Nosotros</a>
+      <a class="link" href="#servicios" data-i18n="nav_services">Servicios</a>
+      <a class="link" href="#galeria" data-i18n="nav_gallery">Galería</a>
+      <a class="link" href="#contacto" data-i18n="nav_contact">Contacto</a>
+      <div class="actions">
+        <button class="lang" id="lang" type="button" aria-label="Change language to English">EN</button>
+        <a class="btn btn-primary btn-sm" href="tel:+12148818706"><span data-i18n="call">Llamar</span><span class="num">214-881-8706</span></a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 data-i18n="hero_h1">Tu espacio, pintado con cuidado.</h1>
+        <p class="sub" data-i18n="hero_sub">Pintura interior y exterior, y drywall con tape y acabado. Trabajo limpio y ordenado en Dallas, Texas.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contacto" data-i18n="cta_quote">Pedir cotización</a>
+          <a class="btn btn-ghost" href="tel:+12148818706">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span>214-881-8706</span>
+          </a>
+        </div>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 3 3 5-6"/></svg>
+          <span data-i18n="hero_note">Negocio registrado en el Condado de Dallas desde 2022</span>
+        </p>
+        <p class="hero-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <span data-i18n="service_area">Trabajamos en toda el área de Dallas-Fort Worth</span>
+        </p>
+      </div>
+
+      <div class="fan" aria-hidden="true">
+        <div class="chip" style="--i:0; --a:-36deg; --c:var(--sun)"><b></b><span data-i18n="chip1">Sol</span></div>
+        <div class="chip" style="--i:1; --a:-22deg; --c:var(--brick)"><b></b><span data-i18n="chip2">Ladrillo</span></div>
+        <div class="chip" style="--i:2; --a:-7deg; --c:var(--tape)"><b></b><span data-i18n="chip3">Cinta</span></div>
+        <div class="chip" style="--i:3; --a:7deg; --c:var(--leaf)"><b></b><span data-i18n="chip4">Hoja</span></div>
+        <div class="chip" style="--i:4; --a:22deg; --c:var(--rose)"><b></b><span data-i18n="chip5">Rosa</span></div>
+        <div class="chip" style="--i:5; --a:36deg; --c:var(--violet)"><b></b><span data-i18n="chip6">Uva</span></div>
+        <span class="pin"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVER LETTER + BUSINESS DATA -->
+  <section class="section" id="sobre-mi" style="padding-top: clamp(24px, 4vw, 48px)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="about_h">Carta de presentación</h2>
+      </div>
+      <div class="letter-wrap">
+        <article class="letter">
+          <p class="place" data-i18n="letter_place">Dallas, Texas</p>
+          <div class="body">
+            <p class="hi" data-i18n="letter_hi">Estimado cliente:</p>
+            <p data-i18n="letter_p1">Somos I.E. Tape &amp; Painting, un negocio de pintura y acabados de drywall con base en Dallas, Texas, dirigido por su propietario, Roger Castro, y registrado en el Condado de Dallas desde 2022.</p>
+            <p data-i18n="letter_p2">Dejar que alguien trabaje en tu casa o en tu negocio es un acto de confianza. Por eso nos involucramos personalmente en cada proyecto: revisamos la superficie, protegemos pisos y muebles, preparamos bien las paredes y terminamos con líneas limpias y un acabado parejo.</p>
+            <p data-i18n="letter_p3">Ya sea que necesites pintar una habitación, renovar el exterior de tu casa o dejar lista una pared de drywall, te explicamos el trabajo con claridad, te damos un precio antes de empezar y dejamos el espacio limpio al terminar.</p>
+            <p data-i18n="letter_p4">Nos encantaría conocer tu proyecto. Llámanos o escríbenos y coordinamos una visita.</p>
+          </div>
+          <div class="sign">
+            <p data-i18n="letter_bye">Atentamente,</p>
+            <p class="script">Roger A. Castro</p>
+            <p class="role" data-i18n="sig_role">Propietario, I.E. Tape &amp; Painting</p>
+          </div>
+        </article>
+
+        <aside class="facts">
+          <h3 data-i18n="facts_h">Datos del negocio</h3>
+          <dl>
+            <div class="row"><dt data-i18n="f_biz">Negocio</dt><dd>I.E. Tape &amp; Painting</dd></div>
+            <div class="row"><dt data-i18n="f_owner">Propietario</dt><dd>Roger Andres Castro</dd></div>
+            <div class="row"><dt data-i18n="f_type">Tipo de negocio</dt><dd data-i18n="f_type_v">Negocio de propietario único</dd></div>
+            <div class="row"><dt data-i18n="f_reg">Registro</dt><dd data-i18n="f_reg_v">Certificado de nombre comercial (Assumed Name), Condado de Dallas, 25 de marzo de 2022</dd></div>
+            <div class="row"><dt data-i18n="f_addr">Dirección</dt><dd>8542 Spring Valley Rd Apt 110<br>Dallas, TX 75240</dd></div>
+            <div class="row"><dt data-i18n="f_phone">Teléfono</dt><dd><a href="tel:+12148818706">214-881-8706</a></dd></div>
+            <div class="row"><dt data-i18n="f_mail">Correo</dt><dd><a href="mailto:castroroger05@icloud.com">castroroger05@icloud.com</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="servicios" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="services_h">Servicios</h2>
+        <p data-i18n="services_intro">Lo que hacemos por tu espacio.</p>
+      </div>
+      <ul class="services">
+        <li><span class="sw" style="--c:var(--sun)"></span><div><h3 data-i18n="s1_t">Pintura interior</h3><p data-i18n="s1_d">Habitaciones, salas, cocinas y pasillos. Paredes, techos y molduras con acabado parejo y líneas limpias.</p></div></li>
+        <li><span class="sw" style="--c:var(--brick)"></span><div><h3 data-i18n="s2_t">Pintura exterior</h3><p data-i18n="s2_d">Fachadas, puertas y molduras. Preparación y pintura pensadas para resistir el clima de Texas.</p></div></li>
+        <li><span class="sw" style="--c:var(--tape)"></span><div><h3 data-i18n="s3_t">Drywall: tape y acabado</h3><p data-i18n="s3_d">Cinta, masilla y textura en juntas, esquinas y parches, para que la pared quede lista para pintar.</p></div></li>
+        <li><span class="sw" style="--c:var(--leaf)"></span><div><h3 data-i18n="s4_t">Reparaciones y retoques</h3><p data-i18n="s4_d">Huecos, grietas y marcas en las paredes, resanadas y con el color igualado.</p></div></li>
+        <li><span class="sw" style="--c:var(--rose)"></span><div><h3 data-i18n="s5_t">Preparación de superficies</h3><p data-i18n="s5_d">Limpieza, lijado y primer para que la pintura agarre bien y dure más.</p></div></li>
+        <li><span class="sw" style="--c:var(--violet)"></span><div><h3 data-i18n="s6_t">Asesoría de color</h3><p data-i18n="s6_d">Te ayudamos a elegir el color y el acabado (mate, satinado o brillante) según cada espacio.</p></div></li>
+        <li><span class="sw" style="--c:var(--sun)"></span><div><h3 data-i18n="s7_t">Pintura de cercas y vallas</h3><p data-i18n="s7_d">Limpieza, reparación de tablas y pintura o sellador para cercas de madera o metal.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section" style="padding-top: 0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 data-i18n="proc_h">Cómo trabajamos</h2>
+      </div>
+      <ol class="steps">
+        <li><h3 data-i18n="p1_t">Visita y cotización</h3><p data-i18n="p1_d">Vemos el espacio, hablamos de lo que necesitas y te damos un precio claro.</p></li>
+        <li><h3 data-i18n="p2_t">Preparación y protección</h3><p data-i18n="p2_d">Cubrimos pisos y muebles, reparamos las paredes y colocamos la cinta en cada borde.</p></li>
+        <li><h3 data-i18n="p3_t">Pintura y acabado</h3><p data-i18n="p3_d">Aplicamos las capas necesarias para un color parejo y sin marcas.</p></li>
+        <li><h3 data-i18n="p4_t">Revisión y limpieza</h3><p data-i18n="p4_d">Revisamos cada detalle contigo y dejamos el lugar limpio.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ALBUM CTA -->
+  <section class="section" id="galeria" style="padding-top: 0">
+    <div class="wrap">
+      <div class="album-card">
+        <div class="album-copy">
+          <h2 data-i18n="gal_h">Trabajos recientes</h2>
+          <p data-i18n="gal_sub">Fotos y videos de nuestros trabajos en el área de Dallas-Fort Worth.</p>
+          <a class="btn btn-primary" href="album.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="1.8"/><path d="m21 16-5-5-8 8"/></svg>
+            <span data-i18n="gal_btn">Ver álbum de fotos y videos</span>
+          </a>
+        </div>
+        <div class="album-swatch" aria-hidden="true">
+          <span style="--c:var(--sun)"></span><span style="--c:var(--brick)"></span>
+          <span style="--c:var(--tape)"></span><span style="--c:var(--leaf)"></span>
+          <span style="--c:var(--rose)"></span><span style="--c:var(--violet)"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contacto">
+    <div class="wrap">
+      <div>
+        <h2 data-i18n="contact_h">Hablemos de tu proyecto</h2>
+        <p class="lead" data-i18n="contact_sub">Llámanos o escríbenos y coordinamos una visita para ver el trabajo.</p>
+        <div class="cta-row">
+          <a class="btn btn-sun" href="tel:+12148818706">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span data-i18n="call_num">Llamar al 214-881-8706</span>
+          </a>
+          <a class="btn btn-line" href="sms:+12148818706" data-i18n="btn_text">Enviar mensaje de texto</a>
+          <a class="btn btn-line" href="mailto:castroroger05@icloud.com" data-i18n="btn_mail">Escribir por correo</a>
+        </div>
+      </div>
+      <div class="list">
+        <div class="item">
+          <small data-i18n="f_phone">Teléfono</small>
+          <div class="num-row">
+            <a class="phone-big" href="tel:+12148818706">214-881-8706</a>
+            <button class="copy" type="button" data-copy="214-881-8706" data-i18n="copy_num">Copiar número</button>
+          </div>
+          <p class="hint" data-i18n="hint">Desde tu celular, toca el número para llamar. Desde la computadora, cópialo.</p>
+        </div>
+        <div class="item">
+          <small data-i18n="f_mail">Correo</small>
+          <div class="mail-row">
+            <a href="mailto:castroroger05@icloud.com">castroroger05@icloud.com</a>
+            <button class="copy" type="button" data-copy="castroroger05@icloud.com" data-i18n="copy_mail">Copiar correo</button>
+          </div>
+        </div>
+        <div class="item"><small data-i18n="f_addr">Dirección</small><address>8542 Spring Valley Rd Apt 110<br>Dallas, TX 75240</address></div>
+        <div class="item"><small data-i18n="f_owner">Propietario</small><span>Roger A. Castro</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="strip" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <span>© 2026 I.E. Tape &amp; Painting. Dallas, Texas.</span>
+    <span data-i18n="foot_reg">Nombre comercial registrado en el Condado de Dallas, 2022–2032.</span>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lb" aria-label="Foto ampliada">
+  <img id="lbImg" alt="">
+  <button type="button" id="lbClose" aria-label="Cerrar">×</button>
+</dialog>
+
+<script>
+(function () {
+  var T = {
+    es: {
+      title: "I.E. Tape & Painting | Pintura y drywall en Dallas, TX",
+      nav_label: "Principal",
+      nav_about: "Nosotros", nav_services: "Servicios", nav_gallery: "Galería", nav_contact: "Contacto",
+      call: "Llamar",
+      call_num: "Llamar al 214-881-8706", copy_num: "Copiar número", copy_mail: "Copiar correo", copied: "Copiado", copy_fail: "Cópialo a mano",
+      hint: "Desde tu celular, toca el número para llamar. Desde la computadora, cópialo.",
+      call_num: "Llamar al 214-881-8706", copy_num: "Copiar número", copy_mail: "Copiar correo", copied: "Copiado", copy_fail: "Cópialo a mano",
+      hint: "Desde tu celular, toca el número para llamar. Desde la computadora, cópialo.",
+      hero_h1: "Tu espacio, pintado con cuidado.",
+      hero_sub: "Pintura interior y exterior, y drywall con tape y acabado. Trabajo limpio y ordenado en Dallas, Texas.",
+      cta_quote: "Pedir cotización",
+      hero_note: "Negocio registrado en el Condado de Dallas desde 2022",
+      service_area: "Trabajamos en toda el área de Dallas-Fort Worth",
+      chip1: "Sol", chip2: "Ladrillo", chip3: "Cinta", chip4: "Hoja", chip5: "Rosa", chip6: "Uva",
+      about_h: "Carta de presentación",
+      letter_place: "Dallas, Texas",
+      letter_hi: "Estimado cliente:",
+      letter_p1: "Somos I.E. Tape & Painting, un negocio de pintura y acabados de drywall con base en Dallas, Texas, dirigido por su propietario, Roger Castro, y registrado en el Condado de Dallas desde 2022.",
+      letter_p2: "Dejar que alguien trabaje en tu casa o en tu negocio es un acto de confianza. Por eso nos involucramos personalmente en cada proyecto: revisamos la superficie, protegemos pisos y muebles, preparamos bien las paredes y terminamos con líneas limpias y un acabado parejo.",
+      letter_p3: "Ya sea que necesites pintar una habitación, renovar el exterior de tu casa o dejar lista una pared de drywall, te explicamos el trabajo con claridad, te damos un precio antes de empezar y dejamos el espacio limpio al terminar.",
+      letter_p4: "Nos encantaría conocer tu proyecto. Llámanos o escríbenos y coordinamos una visita.",
+      letter_bye: "Atentamente,",
+      sig_role: "Propietario, I.E. Tape & Painting",
+      facts_h: "Datos del negocio",
+      f_biz: "Negocio", f_owner: "Propietario", f_type: "Tipo de negocio",
+      f_type_v: "Negocio de propietario único",
+      f_reg: "Registro",
+      f_reg_v: "Certificado de nombre comercial (Assumed Name), Condado de Dallas, 25 de marzo de 2022",
+      f_addr: "Dirección", f_phone: "Teléfono", f_mail: "Correo",
+      services_h: "Servicios",
+      services_intro: "Lo que hacemos por tu espacio.",
+      s1_t: "Pintura interior", s1_d: "Habitaciones, salas, cocinas y pasillos. Paredes, techos y molduras con acabado parejo y líneas limpias.",
+      s2_t: "Pintura exterior", s2_d: "Fachadas, puertas y molduras. Preparación y pintura pensadas para resistir el clima de Texas.",
+      s3_t: "Drywall: tape y acabado", s3_d: "Cinta, masilla y textura en juntas, esquinas y parches, para que la pared quede lista para pintar.",
+      s4_t: "Reparaciones y retoques", s4_d: "Huecos, grietas y marcas en las paredes, resanadas y con el color igualado.",
+      s5_t: "Preparación de superficies", s5_d: "Limpieza, lijado y primer para que la pintura agarre bien y dure más.",
+      s6_t: "Asesoría de color", s6_d: "Te ayudamos a elegir el color y el acabado (mate, satinado o brillante) según cada espacio.",
+      s7_t: "Pintura de cercas y vallas", s7_d: "Limpieza, reparación de tablas y pintura o sellador para cercas de madera o metal.",
+      proc_h: "Cómo trabajamos",
+      p1_t: "Visita y cotización", p1_d: "Vemos el espacio, hablamos de lo que necesitas y te damos un precio claro.",
+      p2_t: "Preparación y protección", p2_d: "Cubrimos pisos y muebles, reparamos las paredes y colocamos la cinta en cada borde.",
+      p3_t: "Pintura y acabado", p3_d: "Aplicamos las capas necesarias para un color parejo y sin marcas.",
+      p4_t: "Revisión y limpieza", p4_d: "Revisamos cada detalle contigo y dejamos el lugar limpio.",
+      gal_h: "Trabajos recientes", gal_sub: "Fotos y videos de nuestros trabajos en el área de Dallas-Fort Worth.", gal_btn: "Ver álbum de fotos y videos",
+      photo: "Foto", video: "Video",
+      vid_h: "En video", vid_sub: "Mira cómo trabajamos.",
+      contact_h: "Hablemos de tu proyecto",
+      contact_sub: "Llámanos o escríbenos y coordinamos una visita para ver el trabajo.",
+      btn_text: "Enviar mensaje de texto", btn_mail: "Escribir por correo",
+      foot_reg: "Nombre comercial registrado en el Condado de Dallas, 2022–2032.",
+      lb_label: "Foto ampliada", lb_close: "Cerrar",
+      lang_btn: "EN", lang_aria: "Change language to English"
+    },
+    en: {
+      title: "I.E. Tape & Painting | Painting and drywall in Dallas, TX",
+      nav_label: "Main",
+      nav_about: "About us", nav_services: "Services", nav_gallery: "Gallery", nav_contact: "Contact",
+      call: "Call",
+      call_num: "Call 214-881-8706", copy_num: "Copy number", copy_mail: "Copy email", copied: "Copied", copy_fail: "Copy it manually",
+      hint: "On your phone, tap the number to call. On a computer, copy it.",
+      call_num: "Call 214-881-8706", copy_num: "Copy number", copy_mail: "Copy email", copied: "Copied", copy_fail: "Copy it manually",
+      hint: "On your phone, tap the number to call. On a computer, copy it.",
+      hero_h1: "Your space, painted with care.",
+      hero_sub: "Interior and exterior painting, plus drywall taping and finishing. Clean, organized work in Dallas, Texas.",
+      cta_quote: "Request a quote",
+      hero_note: "Business registered in Dallas County since 2022",
+      service_area: "We work throughout the Dallas-Fort Worth area",
+      chip1: "Sun", chip2: "Brick", chip3: "Tape", chip4: "Leaf", chip5: "Rose", chip6: "Grape",
+      about_h: "Letter of introduction",
+      letter_place: "Dallas, Texas",
+      letter_hi: "Dear customer,",
+      letter_p1: "We are I.E. Tape & Painting, a painting and drywall finishing business based in Dallas, Texas, led by its owner, Roger Castro, and registered in Dallas County since 2022.",
+      letter_p2: "Letting someone work in your home or business is an act of trust. That is why we get personally involved in every project: we inspect the surface, protect floors and furniture, prepare the walls carefully, and finish with clean lines and an even coat.",
+      letter_p3: "Whether you need a room painted, the outside of your home refreshed, or a drywall wall made ready, we explain the work clearly, give you a price before we start, and leave the space clean when we finish.",
+      letter_p4: "We would love to hear about your project. Call or message us and we will set up a visit.",
+      letter_bye: "Sincerely,",
+      sig_role: "Owner, I.E. Tape & Painting",
+      facts_h: "Business details",
+      f_biz: "Business", f_owner: "Owner", f_type: "Business type",
+      f_type_v: "Sole proprietorship",
+      f_reg: "Registration",
+      f_reg_v: "Assumed Name Certificate, Dallas County, March 25, 2022",
+      f_addr: "Address", f_phone: "Phone", f_mail: "Email",
+      services_h: "Services",
+      services_intro: "What we do for your space.",
+      s1_t: "Interior painting", s1_d: "Bedrooms, living rooms, kitchens and hallways. Walls, ceilings and trim with an even finish and clean lines.",
+      s2_t: "Exterior painting", s2_d: "Siding, doors and trim. Prep and paint built to stand up to the Texas weather.",
+      s3_t: "Drywall taping and finishing", s3_d: "Tape, joint compound and texture on seams, corners and patches, so the wall is ready to paint.",
+      s4_t: "Repairs and touch-ups", s4_d: "Holes, cracks and marks in walls, patched and color-matched.",
+      s5_t: "Surface preparation", s5_d: "Cleaning, sanding and primer so the paint sticks well and lasts longer.",
+      s6_t: "Color advice", s6_d: "We help you choose the color and sheen (matte, satin or gloss) for each space.",
+      s7_t: "Fence painting", s7_d: "Cleaning, board repair, and paint or sealant for wood or metal fences.",
+      proc_h: "How we work",
+      p1_t: "Visit and quote", p1_d: "We see the space, talk through what you need, and give you a clear price.",
+      p2_t: "Prep and protection", p2_d: "We cover floors and furniture, repair the walls and tape every edge.",
+      p3_t: "Paint and finish", p3_d: "We apply the coats needed for an even color with no marks.",
+      p4_t: "Walkthrough and cleanup", p4_d: "We go over every detail with you and leave the place clean.",
+      gal_h: "Recent work", gal_sub: "Photos and videos of our work across the Dallas-Fort Worth area.", gal_btn: "View photo & video album",
+      photo: "Photo", video: "Video",
+      vid_h: "On video", vid_sub: "See how we work.",
+      contact_h: "Let's talk about your project",
+      contact_sub: "Call or message us and we will set up a visit to look at the job.",
+      btn_text: "Send a text message", btn_mail: "Write by email",
+      foot_reg: "Assumed name registered in Dallas County, 2022–2032.",
+      lb_label: "Enlarged photo", lb_close: "Close",
+      lang_btn: "ES", lang_aria: "Cambiar el idioma a español"
+    }
+  };
+
+  var current = "es";
+  try { var saved = localStorage.getItem("ie-lang"); if (saved === "en" || saved === "es") current = saved; } catch (e) {}
+
+  function apply(lang) {
+    var d = T[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (d[k] !== undefined) el.textContent = d[k];
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-aria");
+      if (d[k] !== undefined) el.setAttribute("aria-label", d[k]);
+    });
+    var btn = document.getElementById("lang");
+    btn.textContent = d.lang_btn;
+    btn.setAttribute("aria-label", d.lang_aria);
+    document.getElementById("lb").setAttribute("aria-label", d.lb_label);
+    document.getElementById("lbClose").setAttribute("aria-label", d.lb_close);
+    current = lang;
+  }
+
+  document.getElementById("lang").addEventListener("click", function () {
+    var next = current === "es" ? "en" : "es";
+    apply(next);
+    try { localStorage.setItem("ie-lang", next); } catch (e) {}
+  });
+  apply(current);
+
+
+  // Copy buttons (number / email)
+  function fallbackCopy(t) {
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = t; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      return ok;
+    } catch (e) { return false; }
+  }
+  function copyText(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(t).then(function () { return true; }).catch(function () { return fallbackCopy(t); });
+    }
+    return Promise.resolve(fallbackCopy(t));
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-copy]");
+    if (!b) return;
+    var key = b.getAttribute("data-i18n");
+    copyText(b.getAttribute("data-copy")).then(function (ok) {
+      b.textContent = T[current][ok ? "copied" : "copy_fail"];
+      setTimeout(function () { b.textContent = T[current][key]; }, 2200);
+    });
+  });
+
+  // Lightbox (works once real <img> tags replace the photo placeholders)
+  var lb = document.getElementById("lb");
+  var lbImg = document.getElementById("lbImg");
+  document.getElementById("gallery").addEventListener("click", function (e) {
+    var slot = e.target.closest(".slot");
+    if (!slot) return;
+    var img = slot.querySelector("img");
+    if (!img || typeof lb.showModal !== "function") return;
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || "";
+    lb.showModal();
+  });
+  document.getElementById("lbClose").addEventListener("click", function () { lb.close(); });
+  lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+})();
+</script>
+</body>
+</html>
